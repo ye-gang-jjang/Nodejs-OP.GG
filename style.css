@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+body{
+    padding:50px;
+    background-color: #5383e8;
+    list-style:none;
+    margin: 0 auto;
+    width: 300px;
+    padding: 200px;
+}
+ul{
+
+    list-style:none;
+    padding-left:0px;
+}
+
+
+.login .top {position: relative; width:340px; }
+.login .top li {padding: 0 0 9px;}
+.login .top li label{
+    display:inline-block;
+    width:63px;
+    font-size:11px;
+    font-weight:bold;
+}
+.login .top li input[type="text"],
+.login .top li input[type="password"]{
+    width:144px;
+    height:29px;
+    padding:0;
+    border-color:#d9d9d9;
+}
+.login .btn {position:absolute; right: 0; top: 0;}
+.login .top li a{
+    display:block;
+    width:100px;
+    height:69px;
+    background: #1ea1f7;
+    font-size:17px;
+    color:#fff;
+    text-align:center;
+    line-height:69px;
+}
