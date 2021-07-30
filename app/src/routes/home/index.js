@@ -6,12 +6,12 @@ const router = express.Router();
 const ctrl = require("./home.ctrl");
 
 //메인
-router.get("/", ctrl.home);
+router.get("/", ctrl.output.home);
 
 //로그인
-router.get("/login", ctrl.login);
-
+router.get("/login", ctrl.output.login);
+router.post("/login", ctrl.process.login);
 //op.gg
-router.get("/main", ctrl.main);
+router.get("/main", ctrl.output.main);
 
 module.exports = router;

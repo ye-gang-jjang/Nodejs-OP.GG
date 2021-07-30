@@ -1,22 +1,42 @@
 "use strict";
 
-const home = (req, res) => {
-    res.render("home/index");
+const output = {
+    home: (req, res) => {
+        res.render("home/index");
+    },
+    login: (req, res) => {
+        res.render("home/login");
+    },
+    main: (req, res) => {
+        res.render("home/main");
+    },
 };
 
-const login = (req, res) => {
-    res.render("home/login");
-};
-
-const main = (req, res) => {
-    res.render("home/main");
+const process = {
+    login: (req, res) => {
+        console.log(req.body);
+    },
 };
 
 module.exports = {
-    home,
-    login,
-    main
+    output,
+    process,
 };
+
+
+
+// const home = (req, res) => {
+//     res.render("home/index");
+// };
+
+// const login = (req, res) => {
+//     res.render("home/login");
+// };
+
+// const main = (req, res) => {
+//     res.render("home/main");
+
+
 // 위랑 같은 내용임
 //{ key: key }
 //{
