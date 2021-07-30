@@ -21,5 +21,14 @@ function login() {
         body: JSON.stringify(req)   // stringify=문자열로 바꿔주는 메소드, req를 JSON형태의 문자열로 바꿈
     })
         .then((res) => res.json())
-        .then(console.log);
+        .then((res) => {
+            if (res.success) {
+                location.href = "/";
+            } else {
+                alert(res.msg);
+            }
+        })
+        .catch((err) => {
+            console.error(new Error("로그인 중 에러 발생"));
+        });
 }
