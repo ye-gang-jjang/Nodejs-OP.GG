@@ -11,8 +11,11 @@ const home = require("./src/routes/home");
 
 //앱 세팅
 app.set("views", "./src/views");    //화면 뷰를 관리해줄 폴더 파일
+
 app.set("view engine", "ejs");   //어떤 엔진으로 사용할지 선택
 app.use(express.static(__dirname + '/'));   //css 쓸 수 있게 불러옴
+app.use(express.static(`${__dirname}/src/public`)); // dirname은 app.js위치 반환/src/public으로 정적경로로 표현
+
 app.use("/", home);  //use -> 미들 웨어를 등록해주는 메서드
 
 module.exports = app;
