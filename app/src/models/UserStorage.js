@@ -1,10 +1,10 @@
 "use strict";
 
 class UserStorage {
-    static #users = {        //static = 정적 변수로 만들기, #표시 public변수에서 private 변수로 만듬
-        id: ["kim", "nana", "dada"],
-        psword: ["1234", "5678", "1111"],
-        name: ["김씨", "나나씨", "다다씨"],
+    static #users = {
+        id: ["김김김", "이이이", "비비빅"],
+        psword: ["1234", "4567", "8910"],
+        name: ["김씨", "이씨", "아이스크림"],
     };
 
     static getUsers(...fields) {
