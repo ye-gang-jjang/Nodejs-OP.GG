@@ -1,6 +1,6 @@
 "use strict";
 
-const id = document.querySelector("#email"),   //querySelector 는 '질의 선택자' 두번째 파라미터로 들어오는 선택자로 값을 가져올 수 있음.
+const id = document.querySelector("#id"),   //querySelector 는 '질의 선택자' 두번째 파라미터로 들어오는 선택자로 값을 가져올 수 있음.
     psword = document.querySelector("#psword"),
     loginBtn = document.querySelector("button");
 
