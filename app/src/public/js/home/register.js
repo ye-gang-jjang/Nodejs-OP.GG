@@ -1,19 +1,23 @@
 "use strict";
 
 const id = document.querySelector("#id"),   //querySelector 는 '질의 선택자' 두번째 파라미터로 들어오는 선택자로 값을 가져올 수 있음.
+    name = document.querySelector("#name"),
     psword = document.querySelector("#psword"),
-    loginBtn = document.querySelector("#button");
+    confirmPsword = document.querySelector("#confirm-psword"),
+    registerBtn = document.querySelector("#button");
 
 
-loginBtn.addEventListener("click", login);   //click했을 때 login(함수)
+registerBtn.addEventListener("click", register);   //click했을 때 register(함수)
 
-function login() {
+function register() {
     const req = {
         id: id.value,
+        name: name.value,
         psword: psword.value,
+        confirmPsword: confirmPsword.value,
     };
 
-    fetch("/login", {
+    fetch("/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -23,12 +27,12 @@ function login() {
         .then((res) => res.json())
         .then((res) => {
             if (res.success) {
-                location.href = "/main";
+                location.href = "/login";
             } else {
                 alert(res.msg);
             }
         })
         .catch((err) => {
-            console.error(new Error("로그인 중 에러 발생"));
+            console.error(new Error("회원가입 중 에러 발생"));
         });
 }
