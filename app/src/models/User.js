@@ -16,7 +16,7 @@ class User {
             if (id === body.id && psword === body.psword) {
                 return { success: true, msg: "환영합니다." };
             }
-            return { success: false, msg: "비밀번호 다름" };
+            return { success: false, msg: "비밀번호가 일치하지 않습니다." };
         }
         return { success: false, msg: "존재하지 않는 아이디입니다." };
     }

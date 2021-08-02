@@ -13,6 +13,9 @@ const output = {
     main: (req, res) => {
         res.render("home/main");
     },
+    register: (req, res) => {
+        res.render("home/register");
+    },
 };
 
 const process = {

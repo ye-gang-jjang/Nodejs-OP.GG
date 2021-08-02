@@ -2,9 +2,9 @@
 
 class UserStorage {
     static #users = {
-        id: ["김김김", "이이이", "비비빅"],
+        id: ["허예강", "송지훈", "비비빅"],
         psword: ["1234", "4567", "8910"],
-        name: ["김씨", "이씨", "아이스크림"],
+        name: ["예강씨", "지훈씨", "아이스크림"],
     };
 
     static getUsers(...fields) {
